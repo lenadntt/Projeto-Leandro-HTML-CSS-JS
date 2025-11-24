@@ -1,0 +1,24 @@
+ROTEIRO DE APRESENTAÇÃO – JAVASCRIPT DO SITE DE FUTEVÔLEI
+Bom tarde, pessoal. Hoje eu vou apresentar a parte de JavaScript do meu projeto, que é o site
+profissional para aulas de futevôlei. O JavaScript foi fundamental para trazer dinamismo e
+interatividade para a página, principalmente em duas áreas: o carrossel de imagens e o formulário de
+agendamento.
+Primeiro, falando sobre o CARROSSEL:
+A função principal dele é permitir que as imagens troquem automaticamente e também que o usuário
+navegue manualmente. Para isso, eu selecionei os elementos principais do carrossel, como as
+imagens, os botões e os indicadores. Depois, criei uma variável chamada 'index', que controla qual
+imagem está sendo exibida. Sempre que esse índice muda, a função updateCarousel é chamada, que
+move o carrossel no eixo horizontal usando transform: translateX. Além disso, os indicadores mudam
+automaticamente para mostrar qual imagem está ativa. Também coloquei uma troca automática a
+cada 5 segundos, mantendo o site mais dinâmico sem exigir interação do usuário.
+Agora falando sobre o FORMULÁRIO:
+O formulário é usado para os alunos agendarem suas aulas. Para funcionar corretamente, ele precisa
+validar as informações antes do envio. Quando o usuário clica em "Enviar", o JavaScript impede o
+recarregamento automático da página e analisa os campos preenchidos. Eu verifico nome, telefone e
+modalidade. Se algum estiver vazio, aparece uma mensagem de erro. Caso contrário, uma mensagem
+de sucesso é exibida e o formulário é limpo automaticamente. Isso melhora a experiência do usuário e
+evita envios incompletos.
+Para finalizar:
+Essas funcionalidades trazem mais profissionalismo ao site e tornam a navegação mais fluida e
+intuitiva. O JavaScript foi essencial para criar essa experiência interativa e responsiva. Obrigada pela
+atenção!
