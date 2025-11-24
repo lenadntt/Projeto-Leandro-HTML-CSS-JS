@@ -1,0 +1,390 @@
+/* =========================================================
+   ================  ROOT / VARIÁVEIS  =====================
+   ========================================================= */
+:root {
+  /* PALETA PRAIA ESTÉTICA */
+  --areia: #f4e9d8;
+  --areia-escura: #ebdfca;
+  --branco: #ffffff;
+  --azul-mar: #0a7ca7;
+  --azul-mar-escuro: #065a78;
+  --azul-claro: #c8e9f4;
+  --dourado-sol: #f5b041;
+
+  /* TEXTO */
+  --txt: #1f1f1f;
+  --txt-suave: #555;
+  --txt-fraco: #777;
+
+  /* SOMBRA + BORDAS */
+  --shadow: 0 8px 28px rgba(0,0,0,0.15);
+  --radius: 18px;
+
+  /* ESPAÇAMENTO */
+  --container: 1250px;
+
+  /* TRANSIÇÕES */
+  --t: 0.25s ease;
+
+  /* HEADER */
+  --bg-header: #fdf7ef;
+  --text-dark: #2a2a2a;
+  --text-light: #6e6e6e;
+}
+
+/* =========================================================
+   ================  RESET & BASE  =========================
+   ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--areia);
+  color: var(--txt);
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+  width: min(var(--container), 90%);
+  margin: auto;
+}
+
+/* =========================================================
+   =======================  NAVBAR  ========================
+   ========================================================= */
+.navbar {
+  width: 100%;
+  background: var(--bg-header);
+  padding: 1.4rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #f0d3a5;
+}
+
+.nav-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Slabo", serif;
+  font-weight: 400;
+  font-size: 27px;
+}
+
+.brand {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.5px;
+}
+
+.brand-sub {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-top: 4px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   ======================== HERO ===========================
+   ========================================================= */
+.hero {
+  position: relative;
+  height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.45)
+  );
+}
+
+.hero-content {
+  position: absolute;
+  text-align: center;
+  color: var(--branco);
+}
+
+.hero-title {
+  font-size: 54px;
+  font-weight: 700;
+}
+
+.hero-sub {
+  margin: 14px 0 30px;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.btn {
+  padding: 14px 26px;
+  border-radius: var(--radius);
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--t);
+}
+
+.btn-primary {
+  background: var(--azul-mar);
+  color: var(--branco);
+}
+
+.btn-primary:hover {
+  background: var(--azul-mar-escuro);
+}
+
+/* =========================================================
+   ================== GRID PRINCIPAL =======================
+   ========================================================= */
+.main-split {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 40px;
+}
+
+/* =========================================================
+   ====================== CARROSSEL =========================
+   ========================================================= */
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: var(--branco);
+  height: 450px; /* NOVO TAMANHO */
+}
+
+.carousel {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0006;
+  color: var(--branco);
+  border: none;
+  font-size: 30px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--t);
+}
+
+.carousel-btn:hover {
+  background: #0009;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* Indicadores */
+.carousel-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-indicators button {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--branco);
+  opacity: 0.6;
+  border: none;
+  transition: var(--t);
+  cursor: pointer;
+}
+
+.carousel-indicators button.active {
+  opacity: 1;
+  background: var(--azul-mar);
+}
+
+/* =========================================================
+   ====================== FORMULÁRIO ========================
+   ========================================================= */
+.split-right {
+  background: var(--branco);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.panel-title h2 {
+  font-size: 28px;
+  color: var(--azul-mar);
+}
+
+.panel-title .muted {
+  color: var(--txt-fraco);
+  font-size: 15px;
+}
+
+.contact-card {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-row label {
+  font-weight: 600;
+  color: var(--txt);
+}
+
+input, textarea, select {
+  background: var(--areia-escura);
+  border: 2px solid var(--areia);
+  padding: 12px;
+  border-radius: var(--radius);
+  font-size: 15px;
+  transition: var(--t);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--azul-mar);
+  outline: none;
+  background: var(--branco);
+}
+
+.form-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.btn-ghost {
+  border: 2px solid var(--azul-mar);
+  color: var(--azul-mar);
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  transition: var(--t);
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  background: var(--azul-mar);
+  color: var(--branco);
+}
+
+.form-status {
+  margin-top: 10px;
+  min-height: 20px;
+  font-size: 14px;
+}
+
+/* =========================================================
+   ====================== FUNDAMENTOS =======================
+   ========================================================= */
+.fundamentos {
+  margin-top: 110px;
+}
+
+.fund-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.fund-card {
+  background: var(--branco);
+  padding: 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: var(--shadow);
+  transition: var(--t);
+}
+
+.fund-card:hover {
+  background: var(--azul-claro);
+}
+
+/* =========================================================
+   ======================= FOOTER ==========================
+   ========================================================= */
+.site-footer {
+  margin-top: 80px;
+  padding: 30px 0;
+  background: var(--branco);
+  box-shadow: var(--shadow);
+  font-family: "Slabo", serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: center; 
+  text-align: center;     
+  gap: 12px;
+}
+
+.socials a {
+  margin-left: 14px;
+  color: var(--azul-mar);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--t);
+}
+
+.socials a:hover {
+  color: var(--azul-mar-escuro);
+}

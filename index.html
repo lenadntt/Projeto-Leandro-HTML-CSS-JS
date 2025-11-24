@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Douglas Celani — Futevôlei Pro</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-inner">
+            <h1 class="brand">Douglas Celani</h1>
+            <span class="brand-sub">Treinador de Futevôlei</span>
+        </div>
+    </header>
+
+  <section id="home" class="hero">
+    <div class="hero-media">
+      <img src="assets/Praia.jpeg" alt="Treino de futevôlei - sol" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content container">
+      <h1 class="hero-title">Sua Evolução Começa Agora</h1>
+      <p class="hero-sub">Treinos personalizados · Técnica · Cardio · Campeonatos — na areia com energia e amizade.</p>
+      <a href="#contato" class="btn btn-primary">Agende sua Aula Experimental</a>
+    </div>
+  </section>
+
+  <main class="container main-split" id="galeria">
+    <section class="split-left">
+      <div class="panel-title">
+        <h2>Galeria & Momentos</h2>
+        <p class="muted">Campeonatos, treinos e a vibe da areia.</p>
+      </div>
+
+      <div class="carousel-wrapper" aria-label="Galeria de fotos">
+        <div class="carousel" tabindex="0">
+          <div class="slide"><img src="assets/Camp 01.jpeg" alt="Campeonato - foto 1"></div>
+          <div class="slide"><img src="assets/Camp 02.jpeg" alt="Campeonato - foto 2"></div>
+          <div class="slide"><img src="assets/Camp 03.jpeg" alt="Campeonato - foto 3"></div>
+          <div class="slide"><img src="assets/Chapa.jpeg" alt="Treino - chapa"></div>
+          <div class="slide"><img src="assets/Felicidade.jpeg" alt="Alegria na areia"></div>
+          <div class="slide"><img src="assets/Ombrinho.jpeg" alt="Treino - ombrinho"></div>
+          <div class="slide"><img src="assets/Ombro.jpeg" alt="Treino - ombro"></div>
+          <div class="slide"><img src="assets/Pódio 01.jpeg" alt="Pódio e vitória"></div>
+        </div>
+
+        <button class="carousel-btn prev" aria-label="Anterior" title="Anterior">&#10094;</button>
+        <button class="carousel-btn next" aria-label="Próximo" title="Próximo">&#10095;</button>
+
+        <div class="carousel-indicators" role="tablist" aria-hidden="false"></div>
+      </div>
+    </section>
+
+    <!-- RIGHT: FORMULÁRIO -->
+    <aside class="split-right" id="contato">
+      <div class="panel-title">
+        <h2>Agende sua Aula</h2>
+        <p class="muted">Preencha os dados e entrarei em contato o mais rápido possível.</p>
+      </div>
+
+      <form id="contactForm" class="contact-card" novalidate>
+        <div class="field-row">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required />
+        </div>
+
+        <div class="field-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="seu@email.com" required />
+        </div>
+
+        <div class="field-row">
+          <label for="telefone">Telefone</label>
+          <input id="telefone" name="telefone" type="tel" placeholder="(DDD) 9xxxx-xxxx" required />
+        </div>
+
+        <div class="field-row">
+          <label for="horario">Horário desejado</label>
+          <input id="horario" name="horario" type="text" placeholder="Ex: Seg 18h ou Sáb 08h" />
+        </div>
+
+        <div class="field-row">
+          <label for="nivel">Nível</label>
+          <select id="nivel" name="nivel" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="iniciante">Iniciante</option>
+            <option value="intermediario">Intermediário</option>
+            <option value="avancado">Avançado</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <label for="mensagem">Mensagem (opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Ex: objetivo, alergias, info extra..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Enviar Pedido</button>
+          <a class="btn btn-ghost" id="whatsappBtn" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+        </div>
+
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="small-note">
+        <p>Também posso responder via WhatsApp — clique em <strong>Enviar por WhatsApp</strong> para abrir uma mensagem pronta.</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- FUNDAMENTOS (breve) -->
+  <section class="container fundamentos" id="fundamentos">
+    <h3>Fundamentos</h3>
+    <div class="fund-grid">
+      <div class="fund-card">Chapa</div>
+      <div class="fund-card">Ombro</div>
+      <div class="fund-card">Peito</div>
+      <div class="fund-card">Cabeça</div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>© <span id="year"></span> Douglas Celani — Futevôlei Pro</div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
