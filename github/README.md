@@ -3,6 +3,7 @@ Template para professores de futevôlei usarem para facilitar o acesso que eles 
 ---
 - Projeto Leandro.
 - GitHub: lenadntt
+- Helena Trombetta & Anne Castro.
 
 ## **A. Visão Geral e Identidade Visual (Moodboard)**
 
@@ -84,9 +85,7 @@ Seção simples, clara e objetiva:
 - Ombro
 - Peito
 - Cabeça
-- Shark
 
-(Esses fundamentos vêm direto do esporte real → mantidos pelo pedido original)
 
 ---
 
